@@ -24,7 +24,6 @@ export default function OnboardingScreen() {
       handle: handle || displayName.toLowerCase().replace(/\s+/g, ''),
       displayName, bio, avatarColor: color, fandomIds: selected,
     });
-  };
 
     } catch (e) {
       Alert.alert("Error creating persona", String(e && e.message ? e.message : e));
