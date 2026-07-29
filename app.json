@@ -15,6 +15,11 @@
       "adaptiveIcon": { "backgroundColor": "#0b0b12" }
     },
     "web": { "bundler": "metro" },
-    "plugins": []
+    "plugins": [],
+  "extra": {
+    "eas": {
+      "projectId": "661e351c-8900-4020-831c-22f7efbad42a"
+    }
+  }
   }
 }
