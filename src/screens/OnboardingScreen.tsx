@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, TouchableOpacity, ScrollView, KeyboardAvoidingView, Platform } from 'react-native';
+import { View, Text, TextInput, TouchableOpacity, ScrollView, KeyboardAvoidingView, Platform, Alert } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useStore } from '../store/useStore';
 import { theme } from '../theme/theme';
@@ -19,12 +19,16 @@ export default function OnboardingScreen() {
 
   const create = async () => {
     if (!displayName.trim()) return;
+    try {
     await createPersona({
       handle: handle || displayName.toLowerCase().replace(/\s+/g, ''),
       displayName, bio, avatarColor: color, fandomIds: selected,
     });
   };
 
+    } catch (e) {
+      Alert.alert("Error creating persona", String(e && e.message ? e.message : e));
+    }
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: theme.bg }}>
       <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : undefined} style={{ flex: 1 }}>
