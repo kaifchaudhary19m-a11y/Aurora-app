@@ -1,0 +1,20 @@
+{
+  "expo": {
+    "name": "Aurora",
+    "slug": "aurora-social-sim",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "dark",
+    "splash": {
+      "backgroundColor": "#0b0b12"
+    },
+    "assetBundlePatterns": ["**/*"],
+    "ios": { "supportsTablet": true, "bundleIdentifier": "com.you.aurora" },
+    "android": {
+      "package": "com.you.aurora",
+      "adaptiveIcon": { "backgroundColor": "#0b0b12" }
+    },
+    "web": { "bundler": "metro" },
+    "plugins": []
+  }
+}
