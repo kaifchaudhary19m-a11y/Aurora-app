@@ -28,6 +28,7 @@ export default function OnboardingScreen() {
     } catch (e) {
       Alert.alert("Error creating persona", String(e && e.message ? e.message : e));
     }
+  };
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: theme.bg }}>
       <KeyboardAvoidingView behavior={Platform.OS === 'ios' ? 'padding' : undefined} style={{ flex: 1 }}>
